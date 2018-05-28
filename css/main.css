@@ -417,10 +417,26 @@ height: 100%;
   padding-bottom: 4%;
 }
 #submit_button {
-  background-color: #F67B7C !important;
+  background-color: #4b6cb7 !important;
 }
 .btn-large i {
   font-size: 1rem;
+}
+.social-icons {
+  margin: .5rem;
+}
+.social-icons i {
+  font-size: 1.5rem;
+  padding: 12px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid #d5d5d5;
+  opacity: .8;
+}
+.social-icons i:hover {
+  opacity: 1;
+  border: 1px solid #222;
 }
 #work {
   padding-top: 4rem;
@@ -454,6 +470,15 @@ height: 100%;
       font-family: 'Pacifico', cursive;
       font-size: 2rem;
       opacity: .8;
+}
+.sub-heading h5 {
+      font-family: 'Pacifico', cursive;
+      font-size: 1.5rem;
+      opacity: .8;
+      margin-top: 4rem;
+}
+.sub-heading {
+  float: none !important;
 }
 .body-heading h3:after {
     background-image: linear-gradient(90deg, #a8bceb, #a89cc8, #4b6cb7);
@@ -503,10 +528,10 @@ height: 100%;
   padding: 20% 0;
 }
 .card-content a {
-  color: #F67B7C;
+  color: #4b6cb7;
 }
 .card-content a:hover {
-  color: #F67B7C;
+  color: #222222;
 }
 .text_pink {
   color: #EF9A9A;
@@ -538,9 +563,42 @@ input:not([type]), input[type=text], input[type=password], input[type=email], in
   padding-left: 30px;
   padding-right: 30px;
 }
+footer i {
+  padding: 5px;
+}
+footer {
+  color: #fff;
+}
+i {
+  padding: 1rem;
+}
 nav {
   background: inherit;
   box-shadow: none;
+}
+.icon-git {
+  color: #ED513B;
+}
+.icon-heroku {
+  color: #7F5BBF;
+}
+.icon-mysql {
+  color: #0D698D;
+}
+.icon-bootstrap {
+  color: #5B3C7D;
+}
+.icon-python {
+  color: #FECE4E;
+}
+.icon-ruby {
+  color: #D14337;
+}
+.icon-javascript-alt {
+  color: #EFDA5B;
+}
+.dev-icons {
+  font-size: 2.5rem;
 }
 @media only screen and (max-width: 480px) {
   .hidden {
@@ -552,13 +610,22 @@ nav {
   font-weight: 100;
   color: white;
 }
+span.dev-icons {
+  font-size: 2.4rem;
+}
 #request {
   width: 75%;
+}
+.row .col.s4 {
+  width: 100%;
 }
 .icon {
   width: 30%;
 }
 .card .card-image img {
   height: 220px;
+}
+.container {
+  width: 100%;
 }
 }
