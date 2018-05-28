@@ -353,6 +353,7 @@ div#contact {
   font-size: 5.5rem;
   padding-top: 5%;
   margin-bottom: -20px;
+  margin-top: 3rem;
 }
 #main_cta {
   text-align: center;
@@ -366,10 +367,10 @@ div#contact {
   font-size: 1.1rem;
   letter-spacing: -0.025em;
 }
-body {
+body, .navbar-fixed {
 background: #4b6cb7;  /* fallback for old browsers */
-background: url("img/overlay.png"), -webkit-url("img/overlay.png"), linear-gradient(45deg, #a8bceb 15%, #4b6cb7 85%);
-background: url("img/overlay.png"), linear-gradient(45deg, #a8bceb 15%, #4b6cb7 85%);
+background: url("img/overlay.png"), -webkit-url("img/overlay.png"), linear-gradient(90deg, #718DCA 15%, #4b6cb7 85%);
+background: url("img/overlay.png"), linear-gradient(90deg, #718DCA 15%, #4b6cb7 85%);
 background-blend-mode: color-burn;
 height: 100%;
 } 
@@ -452,15 +453,18 @@ height: 100%;
   color: white;
   letter-spacing: -0.025em;
 }
-.brand-logo {
+.port-logo {
   color: #fff;
   display: inline-block;
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-style: normal;
   font-weight: 100;
   padding: 0;
   position: relative !important;
   font-family: 'Pacifico', cursive;
+}
+nav#navbar-primary {
+  overflow: hidden;
 }
 .body-heading {
     margin: 30px;
@@ -521,10 +525,10 @@ height: 100%;
     padding-top: 20px;
 }
 .promo i {
-  font-size: 4.3rem;
+  font-size: 3.6rem;
   display: block;
-  height: 110px;
-  width: 110px;
+  height: 90px;
+  width: 90px;
   padding: 20% 0;
 }
 .card-content a {
@@ -600,18 +604,87 @@ nav {
 .dev-icons {
   font-size: 2.5rem;
 }
-@media only screen and (max-width: 480px) {
+.port-container {
+  position: relative;
+  width: 36%;
+  display: inline-block;
+}
+
+.port-image {
+  display: block;
+  width: 400px;
+  height: 250px;
+}
+
+.port_overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .2s ease;
+}
+.icon-margin {
+  margin-bottom: 3rem;
+}
+.port1 {
+   background-color: #008CBA;
+}
+.port2 {
+  background-color: #F27D80;
+}
+.port3 {
+  background-color: #A89EC6;
+}
+.port4 {
+  background-color: #5877BC;
+}
+
+.port-container:hover .port_overlay {
+  opacity: .9;
+}
+
+.port_desc {
+  color: #fff;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+.port_desc a {
+  color: #fff;
+}
+@media only screen and (max-width: 650px) {
+  .port-container {
+    width: 100% !important;
+  }
+  .port-image {
+    width: 100% !important;
+    height: auto !important;
+  }
   .hidden {
   display: none !important;
 }
 .text_h {
   padding: 4% 0;
-  font-size: 4em;
+  font-size: 2.5rem;
   font-weight: 100;
   color: white;
 }
 span.dev-icons {
   font-size: 2.4rem;
+}
+.row .col.s8 {
+  width: 100%;
+}
+.row .col.offset-s2 {
+  margin-left: 0 !important;
 }
 #request {
   width: 75%;
@@ -629,3 +702,37 @@ span.dev-icons {
   width: 100%;
 }
 }
+/* IPAD */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) {
+  .row .col.s4 {
+    width: 100%;
+  }
+  .port-container {
+    width: 100% !important;
+  }
+  .port-image {
+    width: 100% !important;
+    height: auto !important;
+  }
+}
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) {
+.row .col.offset-s1 {
+  margin-left: 0 !important;
+}
+.row .col.s10 {
+  width: 100% !important;
+}
+  .port-container {
+    width: 100% !important;
+  }
+  .port-image {
+    width: 100% !important;
+    height: auto !important;
+  }
+}  

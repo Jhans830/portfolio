@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 </head>
 <body id="top" class="scrollspy">
-<div class="navbar-fixed">
+<div class="navbar-fixed navbar">
 <nav id="navbar-primary" class="navbar" role="navigation">
 <div class="nav-wrapper">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -20,10 +20,10 @@
     <div class="collapse navbar-collapse" id="navbar-primary-collapse">
       <ul class="nav navbar-nav">
         <li class="hidden"><a href="#About">About</a></li>
-        <li class="hidden"><a href="#">Skills</a></li>
-        <li><a href="#" class="brand-logo">Jason Hanshaw</a></li>
-        <li class="hidden"><a href="#">Portfolio</a></li>
-        <li class="hidden"><a href="#">Contact</a></li>
+        <li class="hidden"><a href="#Skills">Skills</a></li>
+        <li><a href="#" class="port-logo">Jason Hanshaw</a></li>
+        <li class="hidden"><a href="#Portfolio">Portfolio</a></li>
+        <li class="hidden"><a href="#Contact">Contact</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
@@ -41,13 +41,13 @@
   </div>
    <div class="col s12" id="subtext">Living in Denver, CO and specializing in custom CRM and Web solutions for global clients.</div>
   </div>
-<div class="section scrollspy" id="Main">
+<div class="section">
 <div class="container">
  <h2 class="header text_b" id="cta_link"></h2>
   <div class="col m12">
    <div class="card z-depth-5">
     <div class="card-content"> 
-    <div class="section scrollspy" id="About">
+    <section class="section scrollspy" id="About">
     <div class="row">
     <div class="col m12 body-heading center"><h3>About Me</h3>
     </div>
@@ -61,9 +61,9 @@
     <span class="social-icons"><a href="https://www.linkedin.com/in/jason-hanshaw-developer/" target="_blank"><i class="fab fa-linkedin-in"></i></a></span><span class="social-icons"><a href="https://gitlab.com/jhans019" target="_blank"><i class="fab fa-gitlab"></i></a></span>
 </div></div>
 
-    </div>
+    </section>
     <hr />
-        <div class="section scrollspy" id="Skills">
+        <section class="section scrollspy" id="Skills">
     <div class="row">
     <div class="col m12 body-heading center"><h3>Skills</h3>
     </div>
@@ -71,13 +71,13 @@
      <div class="row">
      <div class="col s10 offset-s1">
    <div  class="col s4">
-    <div class="center promo promo-example"><span class="icon-wrapper"><span class="icon-wrapper"><i class="fas fa-code"></i></span></span>
+    <div class="center promo promo-example icon-margin"><span class="icon-wrapper"><span class="icon-wrapper"><i class="fas fa-code"></i></span></span>
      <h5 class="promo-caption">Web Development</h5>
      <p class="light center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin et diam vitae lacus ornare rutrum sed sed massa. Pellentesque vitae scelerisque lacus, in sollicitudin justo. Ut sollicitudin posuere auctor.</p>
     </div>
    </div>
    <div class="col s4">
-    <div class="center promo promo-example"><span class="icon-wrapper"><span class="icon-wrapper"><i class="far fa-envelope"></i></span></span>
+    <div class="center promo promo-example icon-margin"><span class="icon-wrapper"><span class="icon-wrapper"><i class="far fa-envelope"></i></span></span>
      <h5 class="promo-caption">Email Solutions</h5>
      <p class="light center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin et diam vitae lacus ornare rutrum sed sed massa. Pellentesque vitae scelerisque lacus, in sollicitudin justo. Ut sollicitudin posuere auctor.</p>
     </div>
@@ -98,23 +98,45 @@
     <div class="col s10 offset-s1">
     <span class="dev-icons"><i class="icon-git"></i></span><span class="dev-icons"><i class="icon-heroku"></i></span><span class="dev-icons"><i class="icon-mysql"></i></span><span class="dev-icons"><i class="icon-bootstrap"></i></span><span class="dev-icons"><i class="icon-python"></i></span><span class="dev-icons"><i class="icon-ruby"></i></span><span class="dev-icons"><i class="icon-javascript-alt"></i></span><span class="dev-icons"><i class="icon-aws"></i></span>
 </div></div>
-    </div>
+    </section>
 <hr />
-    <div class="section scrollspy" id="Portfolio">
+    <section class="section scrollspy" id="Portfolio">
     <div class="row">
     <div class="col m12 body-heading center"><h3>Portfolio</h3>
     </div>
     </div>
-
-    <div class="center">
-    <div class="col s12 center"><img src="https://picsum.photos/280?random" /><img src="https://picsum.photos/280?random" /><img src="https://picsum.photos/280?random" /></div></div>
-    <div class="center">
-       <div class="col s12 center"><img src="https://picsum.photos/280?random" /><img src="https://picsum.photos/280?random" /><img src="https://picsum.photos/280?random" />
-    </div>
-    </div>
-    </div>
-    <hr />
-       <div class="section scrollspy" id="Contact">
+     <div class="center">
+    <div class="col s12 center">
+    <div class="port-container col s6">
+  <img src="img/LaicosRT1.png" alt="Avatar" class="port-image">
+  <div class="port-overlay port1">
+    <div class="port_desc"><a href="#">LaicosRT</a></div>
+  </div>
+</div>
+    <div class="port-container col s6">
+  <img src="img/web_scraping.png" alt="Avatar" class="port-image">
+  <div class="port_overlay port2">
+    <div class="port_desc"><a href="#">Email Content Scraping</a></div>
+  </div>
+</div>
+</div></div>
+     <div class="center">
+    <div class="col s12 center">
+    <div class="port-container col s6">
+  <img src="img/campfire.jpg" alt="Avatar" class="port-image">
+  <div class="port_overlay port3">
+    <div class="port_desc"><a href="#">Campfire</a></div>
+  </div>
+</div>
+    <div class="port-container col s6">
+  <img src="img/mybeautyave.png" alt="Avatar" class="port-image">
+  <div class="port_overlay port4">
+    <div class="port_desc"><a href="#">MyBeautyAvenue</a></div>
+  </div>
+</div>
+</div></div>
+</section>   <hr />
+       <section class="section scrollspy" id="Contact">
     <div class="row">
     <div class="col m12 body-heading center"><h3>Contact</h3>
     </div>
@@ -128,7 +150,7 @@
       <button class="hoverable btn waves-effect waves-light btn-large" id="submit_button" name="action">Email Me</button></a>
      </div>
     </div>
-    </div>
+    </section>
     </div>
    </div>
   </div>
@@ -137,29 +159,17 @@
 <footer><div class="row center">Built with <i class="far fa-heart"></i> by Jason Hanshaw. &copy; 2018</div></footer>
 <!-- Interactive Email Cards : END -->
 <!--  Scripts--> 
+<script>
+$(document).ready(function(){
+    $('#navbar-primary').pushpin({
+      top: $('#navbar-primary').offset().top 
+    });
+    $('.scrollspy').scrollSpy({
+      scrollOffset: 0
+    });
+  });
+</script>
 <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script> 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script> 
-<script>
-jQuery(document).ready(function($) {
-  $(window).scroll(function() {
-    var scrollPos = $(window).scrollTop(),
-        navbar = $('.navbar-primary');
- 
-    if (scrollPos > 20) {
-      navbar.addClass('change-color');
-    } else {
-      navbar.removeClass('change-color');
-    }
-  });
-});
-$(function() {
-  $("a[href*=#]:not([href=#])").click(function() {
-    var a = $(this).attr("href");
-    return $("body").animate({
-      scrollTop: $(a).offset().top + $(".wrap").scrollTop()
-    }, 900), !1
-  })
-});
-  </script>
 </body>
 </html>
