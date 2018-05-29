@@ -367,6 +367,9 @@ div#contact {
   font-size: 1.1rem;
   letter-spacing: -0.025em;
 }
+.btn, .btn:hover {
+  background-color: #374B60;
+}
 body, .navbar-fixed {
 background: #4b6cb7;  /* fallback for old browsers */
 background: url("img/overlay.png"), -webkit-url("img/overlay.png"), linear-gradient(90deg, #718DCA 15%, #4b6cb7 85%);
@@ -645,16 +648,23 @@ nav {
 .port-container:hover .port_overlay {
   opacity: .9;
 }
-
 .port_desc {
   color: #fff;
-  font-size: 20px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
+  font-size: 1.3rem;
   text-align: center;
+  margin: 5% 0 0 0;
+}
+.port-sub {
+  color: #fff;
+  font-size: .8rem;
+  text-align: center;
+  margin: .5rem 1rem 0 1rem;
+}
+.port-cta {
+  color: #fff;
+  font-size: .7rem;
+  text-align: center;
+  margin: 1rem 1rem 0 1rem;
 }
 .port_desc a {
   color: #fff;
@@ -666,6 +676,7 @@ nav {
   .port-image {
     width: 100% !important;
     height: auto !important;
+    min-height: 220px;
   }
   .hidden {
   display: none !important;
