@@ -4,6 +4,10 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
 <title>Jason Hanshaw</title>
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
 <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 <link href="css/main.css" rel="stylesheet">
@@ -21,7 +25,7 @@
       <ul class="nav navbar-nav">
         <li class="hidden"><a href="#About">About</a></li>
         <li class="hidden"><a href="#Skills">Skills</a></li>
-        <li><a href="#" class="port-logo">Jason Hanshaw</a></li>
+        <li><a href="#index-banner" class="port-logo">Jason Hanshaw</a></li>
         <li class="hidden"><a href="#Portfolio">Portfolio</a></li>
         <li class="hidden"><a href="#Contact">Contact</a></li>
       </ul>
@@ -165,19 +169,40 @@
   </div>
 </div>
 <footer><div class="row center">Built with <i class="far fa-heart"></i> by Jason Hanshaw. &copy; 2018</div></footer>
-<!-- Interactive Email Cards : END -->
 <!--  Scripts--> 
 <script>
-$(document).ready(function(){
-    $('#navbar-primary').pushpin({
-      top: $('#navbar-primary').offset().top 
-    });
-    $('.scrollspy').scrollSpy({
-      scrollOffset: 0
-    });
+$(document).ready(function () {
+$('a[href*="#"]')
+  // Remove links that don't actually link to anything
+  .not('[href="#"]')
+  .not('[href="#0"]')
+  .click(function(event) {
+    // On-page links
+    if (
+      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+      && 
+      location.hostname == this.hostname
+    ) {
+      // Figure out element to scroll to
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      // Does a scroll target exist?
+      if (target.length) {
+        // Only prevent default if animation is actually gonna happen
+        event.preventDefault();
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000, function() {
+          // Callback after animation
+          // Must change focus!
+          var $target = $(target);
+          $target.focus();
+        });
+      }
+    }
   });
+});
 </script>
-<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script> 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script> 
 </body>
 </html>
