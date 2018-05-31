@@ -8,7 +8,6 @@
 <meta name="keywords" content="jason hanshaw, Platform Engineer, web developer, email developer, email marketing, email solutions, front-end developer, full-stack developer, salesforce marketing cloud developer, marketing cloud consultant, jhanshaw, jason, hanshaw" />
 <meta name="robots" content="index,follow" />
 <meta name="DC.title" content="Jason Hanshaw - Platform Engineer" />
-<script aync src="https://code.jquery.com/jquery-3.3.1.min.js" ></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
 <link href="css/main.css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Pacifico|Open+Sans" rel="stylesheet">
@@ -170,22 +169,10 @@
 </div>
 <footer><div class="row center">Built with <i class="far fa-heart"></i> by Jason Hanshaw. &copy; 2018</div></footer>
 <!--  Scripts--> 
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" ></script>
 <script>
-//SCROLLSPY
-$(document).ready(function(){
-    $('.scrollspy').scrollSpy();
-  });
+var lastId,topMenu=$("#navbar-primary"),topMenuHeight=topMenu.outerHeight()+15,menuItems=topMenu.find("a"),scrollItems=menuItems.map(function(){var item=$($(this).attr("href"));if(item.length){return item}});menuItems.click(function(e){var href=$(this).attr("href"),offsetTop=href==="#"?0:$(href).offset().top-topMenuHeight+1;$('html, body').stop().animate({scrollTop:offsetTop},300);e.preventDefault()});$(window).scroll(function(){var fromTop=$(this).scrollTop()+topMenuHeight;var cur=scrollItems.map(function(){if($(this).offset().top<fromTop)
+return this})})
 </script>
-<script async src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script> 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-120069912-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-120069912-1');
-</script>
-
 </body>
 </html>
