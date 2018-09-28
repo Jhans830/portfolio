@@ -163,7 +163,7 @@
      <div class="row">
       <div class="col s12">
         <div class="row">
-<form class="cf" method="POST" netlify>
+<form class="cf" method="POST" action="/success" netlify>
   <div class="col s12 cf input-field">
     <input type="text" id="input-name" placeholder="Name">
     <input type="email" id="input-email" placeholder="Email address">
@@ -185,16 +185,6 @@
 </div>
 <footer><div class="row center">&copy; 2018 Jason Hanshaw.</div></footer>
 <!--  Scripts--> 
-<script>
-$("#cf").submit(function(e) {
-  e.preventDefault();
-
-  var $form = $(this);
-  $.post($form.attr("action"), $form.serialize()).then(function() {
-    alert("Thank you!");
-  });
-});
-  </script>
 <script>
 (function(){function getScript(url,success){var script=document.createElement('script');script.src=url;var head=document.getElementsByTagName('head')[0],done=!1;script.onload=script.onreadystatechange=function(){if(!done&&(!this.readyState||this.readyState=='loaded'||this.readyState=='complete')){done=!0;success();script.onload=script.onreadystatechange=null;head.removeChild(script)}};head.appendChild(script)}
 getScript('https://code.jquery.com/jquery-3.3.1.min.js',function(){var lastId,topMenu=$("#navbar-primary"),topMenuHeight=topMenu.outerHeight()+15,menuItems=topMenu.find("a"),scrollItems=menuItems.map(function(){var item=$($(this).attr("href"));if(item.length){return item}});menuItems.click(function(e){var href=$(this).attr("href"),offsetTop=href==="#"?0:$(href).offset().top-topMenuHeight+1;$('html, body').stop().animate({scrollTop:offsetTop},300);e.preventDefault()});$(window).scroll(function(){var fromTop=$(this).scrollTop()+topMenuHeight;var cur=scrollItems.map(function(){if($(this).offset().top<fromTop)
