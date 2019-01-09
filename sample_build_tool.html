@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<meta charset="UTF-8">
+<title>ITC Email Builder</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<style>
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.title {
+  width: 100vw;
+  background: #f09cac;
+  color: white;
+}
+.title_container {
+  margin: 0 auto;
+  font-family: 'Lato', sans-serif;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+  font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -ms-font-smoothing: antialiased;
+}
+.description {
+  font-family: 'Lato', sans-serif;
+}
+li p {
+  background: #fafafa;
+}
+.accordion {
+  max-width: 100%;
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+.accordion li {
+  border-bottom: 1px solid #d9e5e8;
+  position: relative;
+}
+.accordion li p {
+  display: none;
+  padding: 10px 25px 30px 15px;
+  color: #222;
+}
+.accordion a {
+  width: 100%;
+  display: block;
+  cursor: pointer;
+  line-height: 3;
+  font-size: 14px;
+  font-size: 1.2rem;
+  text-indent: 15px;
+  user-select: none;
+  text-transform: uppercase;
+}
+.accordion a:after {
+  width: 8px;
+  height: 8px;
+  border-right: 1px solid #4a6e78;
+  border-bottom: 1px solid #4a6e78;
+  position: absolute;
+  right: 10px;
+  content: " ";
+  top: 22px;
+  transform: rotate(-45deg);
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.accordion p {
+  font-size: 13px;
+  font-size: 0.8125rem;
+  line-height: 2;
+  padding: 10px;
+}
+
+a.active:after {
+  transform: rotate(45deg);
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+body {
+  background: #f5f5f5;
+}
+p {
+  margin: 0 !important;
+}
+.container {
+  width: 100vw;
+  background: #ffffff;
+}
+.description {
+  width: 40vw;
+  background: #f5f5f5;
+  display: inline-block;
+}
+.builder_container {
+  width: 60vw;
+  color: #333;
+  background: #fff;
+  float: right;
+  display: inline-block;
+}
+#title1 {
+  color: #555555;
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+  line-height: 18px;
+  padding-top: 5px;
+  padding-left: 15px;
+  padding-bottom: 5px;
+}
+#title2 {
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+  line-height: 18px;
+  padding-top: 5px;
+  padding-right: 15px;
+  padding-bottom: 5px;
+  font-weight: bold;
+  text-decoration: underline;
+  color: #013e7d;
+}
+.btn {
+  background: #f09cac;
+  color: white;
+  border-radius: 5px;
+  padding: 10px 20px;
+}
+#bodyCopy img {
+  max-width: 100%;
+  height: auto !important;
+}
+.btn {
+  cursor: pointer;
+}
+.btn:hover {
+  background: #f8acbb;
+}
+li strong {
+  font-size: 1rem;
+}
+</style>
+</head>
+
+<body>
+<div class="title"><div class="title_container">IT Cosmetics Email Builder</div></div>
+<div class="container">
+<div class="description">
+<ul class="accordion">
+  <li>
+    <a>About</a>
+    <p>This tool was designed to empower email marketers at IT Cosmetics to generate custom template-based emails utilizing a simple user interface. To begin creating your email, simply click on the section of the email to the right that you wish to edit and then start adding your content. Please note that some sections of content are locked to ensure the integrity of the email layout and ease-of-use.<br /><br />For any questions or requests please reach out to your Merkle contact about the tool.
+
+  </li>
+  <li>
+    <a>Subject Line</a>
+    <p>When creating a subject line for the email, there are a few rules to follow in order to ensure compatibility among all email clients.<br /><br /><strong>Length</strong><br /><br /> Among the most common clients, the amount of characters falls withing a fairly wide range (30 - 73 characters). Due to this, it's important to keep your subject lines short and direct to allow for maximum compatibility<br /><br /><strong>Special Characters</strong><br /><br />Avoid using special characters within your subject lines unless absolutely necessary. Characters such as * % & # and ^ have been known to trigger spam filters.<br /><br /><strong>Emojis</strong><br /><br />Using an emoji in your email subject line is as simple as copying the symbol or emoji from a website/document like Facebook Symbols, or Emojipedia, and pasting it into the subject line field of your email. Emojis enjoy almost universal support amongst email clients and, with the exception of Outlook 2003, will display as intented for all your customers.</p>
+  </li>
+  <li>
+    <a>Text</a>
+    <p>There are several options that you can use to style and format your text within the email. Listed below is a glossary of the relevant functions you may use:<br /><br /><strong>Fonts Types and Sizes</strong><br /><br /><img src="http://image.mail.itcosmetics.com/lib/fe8d13727c64027577/m/4/03f4ca09-42ee-45c2-a937-00aa4ac778a1.png" alt="" width="300" /><br /><br />Both font-family and type can be chosen by selecting the appropriate value from the "font" and "size" drop down menus. The font types supported by this tool are the following: Arial, Comic Sans, Courier New, Georgia, Lucinda Sans Unicode, Tahoma, Times New Roman, Trebuchet, Verdana.<br /><br /><strong>Fonts Styles</strong><br /><br /><img src="http://image.mail.itcosmetics.com/lib/fe8d13727c64027577/m/4/942be64b-d031-48f6-869c-f17dd95eee39.png" alt="" width="200" /><img src="http://image.mail.itcosmetics.com/lib/fe8d13727c64027577/m/4/5caab92b-3e20-4911-8154-69ff032dbae8.png" width="77" /><br /><br />The following font-styles are supported by this tool: bold, italic, underline, strikethrough, subscript, superscripts, color and background-color.<br /><br /><strong>Text Alignment</strong><br /><br /><img src="http://image.mail.itcosmetics.com/lib/fe8d13727c64027577/m/4/d41dfbcf-9207-470f-8b5e-160202b8dcd0.png" alt="" width="140" /><br /><br />These icons can be used to set the alignment on a selection of text. Alignment can be left, center, right or justified.<br /><br /><strong>Lists and Indentations</strong><br /><br /><img src="http://image.mail.itcosmetics.com/lib/fe8d13727c64027577/m/4/ebda8a20-447c-4978-8590-87f2661eb84b.png" alt="" width="140" /><br /><br />These icons allow you to create both ordered and bulleted lists, as well as providing the option to indent a selection of text.</p>
+  </li>
+    <li>
+    <a>Links</a>
+    <p>This tool allows both text and images to be hyperlinked in order to direct the subscriber to external locations. For information on how to link an image within the email builder, please reference the image section of this navigation menu.<br /><br /><strong>Linking A Portion of Text</strong><br /><br /><img src="http://image.mail.itcosmetics.com/lib/fe8d13727c64027577/m/4/f634d454-77fd-471d-8a9a-decc12e614d7.png" alt="" width="40" /><br /><br />In order to add a hyperlink to a portion of text, simply highlight the word or phrase that you wish to link and click on the anchor button displayed above. This should trigger the hyperlink menu to appear.<br /><br /><strong>Link Info</strong><br /><br /><img src="http://image.mail.itcosmetics.com/lib/fe8d13727c64027577/m/4/95f379c4-8611-42d1-9026-1f79e019f912.png" alt="" width="240" /><br /><br />In the Link Info dialog menu, there are several options that can be modified to deliver the desired hyperlink. You should only utilize the options listed below to ensure the functionality within the email will be rendered across clients:<br /><br /><span style="font-weight: bold;">Link Type:</span> Only URL and Email are valid options for this drop-down. If Email is selected, an additional menu will appear that will allow you to set the email address, subject line and body content for the mailto hyperlink.<br /><br /><span style="font-weight: bold;">Protocol:</span> http:// and https:// are the only valid protocols that you should select from this menu.<br /><br /><span style="font-weight: bold;">URL:</span> Use this input field to enter the desired location for your hyperlink to direct to.<br /><br /><strong>Link Target</strong><br /><br /><img src="http://image.mail.itcosmetics.com/lib/fe8d13727c64027577/m/4/76671ad7-197d-4320-bf24-2e3c86a9e045.png" alt="" width="240" /><br /><br />For the Link Target menu, the only valid input is "New Window (_blank)". This selection will ensure that your hyper link will appear in a new window.<br /><br /><strong>Link Advanced</strong><br /><br /><img src="http://image.mail.itcosmetics.com/lib/fe8d13727c64027577/m/4/9b468179-2dd2-4bde-847b-43c0dbab8b8f.png" alt="" width="240" /><br /><br />The Link Advanced menu allows for further styling of links outside of the primary editor. Only the following items should be considered when editing items in this menu.<br /><br /><span style="font-weight: bold;">ID/Stylesheet Classes: </span> Allows you to apply CSS styles that already exist within the email by specifying the name. Unfortunately, due to Outlook's inability to deviate from inline-styling, this option is very limited and will not be applied to all email clients.<br /><br /><span style="font-weight: bold;">Style: </span> This option allows you to write your own CSS styling to this link. Unlike the ID or Stylesheet Classes input, these styles will be inlined with the hyperlink and will therefore be applied in all email clients. It is not recommended to use this option unless you have a solid foundation of CSS knowledge.</p>
+  </li>
+    <li>
+    <a>Images</a>
+    <p>This section outlines how to add images to the email using the build tool. It should be noted that the actual rendering of images within this tool may differ from what is presented in the actual email client. It is important to reference your actual test email or use tools such as Email on Acid to confirm image rendering across all clients.<br /><br /><strong>Adding An Image</strong><br /><br /><img src="http://image.mail.itcosmetics.com/lib/fe8d13727c64027577/m/4/6d8db364-c981-4241-885f-6c99676d6bca.png" alt="" width="40" /><br /><br />To add an image to your email, simply click on the image icon (shown above) to trigger the image menu within the builder.<br /><br /><strong>Image Info</strong><br /><br /><img src="http://image.mail.itcosmetics.com/lib/fe8d13727c64027577/m/4/fcb8fb72-8b2a-4be4-874b-f3473b148051.png" alt="" width="240" /><br /><br />In the Image Info dialog menu, there are several options that can be modified to deliver the desired image output. You should only utilize the options listed below to ensure the functionality within the email will be rendered across clients:<br /><br /><span style="font-weight: bold;">URL:</span> Specify the URL to the image that you want to populate within the email.<br /><br /><span style="font-weight: bold;">Alternative Text:</span> Input the text that you want to appear in the event the user has not downloaded the image.<br /><br /><span style="font-weight: bold;">Width:</span> Specify the width of the image. If the image needs to extend the full width of the email then set this value to 100%, otherwise enter the exact width of the image (not to exceed 750px).<br /><br /><span style="font-weight: bold;">Height:</span> This value should always be left blank in order to ensure the image height will be auto-calculated.<br /><br />All other options should be left empty.<br /><br /><strong>Image Link</strong><br /><br /><img src="http://image.mail.itcosmetics.com/lib/fe8d13727c64027577/m/4/38f82c74-7e3f-4f78-806e-a0b06aa568ef.png" alt="" width="240" /><br /><br />In this menu, you can specify a hyperlink you would like to attach to the image. Note that the value for the "Target" property should always be set to "New Window (_blank)." For more information please reference the Link section of this navigation menu.<br /><br /><strong>Image Advanced</strong><br /><br /><img src="http://image.mail.itcosmetics.com/lib/fe8d13727c64027577/m/4/11e2919c-e396-4174-ad30-0dc7ac54390c.png" alt="" width="240" /><br /><br />The advanced image menu allows you to specify styling that you wish to apply to the image. It is recommended that these fields should remain blank unless you possess knowledge of CSS. For more information, please reference the Link section of this navigation menu.</p>
+  </li>
+    <li>
+    <a>Testing</a>
+    <p><strong>Spell Checking</strong><br /><br /><img src="http://image.mail.itcosmetics.com/lib/fe8d13727c64027577/m/4/3329b70d-96d0-482a-9e2f-e8b7a53739ad.png" alt="" width="40" /><br /><br />To enable spell checking for your email content, click on the section of text you wish to check and then select the icon shown above. After clicking this icon, select "Enable SCAYT" from the dropdown menu to enable spell checking on your content. If you currently use extensions, such as Grammarly, then those functions should perform checks automatically.<br /><br /><strong>Sending A Test Email</strong><br /><br />Once you have finished editing the email and you wish to send a test, simply click the "Build Email" button at the bottom of the page and your email will be created and a test will be sent to a predefined list.<br /><br />If you have an question about the tool or wish to be added to the testing distribution list, then please reach out to your Merkle contact for assistance..</p>
+  </li>
+</ul> <!-- / accordion -->
+</div>
+<div class="builder_container">
+ <table width="100%">
+  <tr>
+   <td align="center" style="padding-bottom: 20px; padding-top: 30px; font-size: 16px;"><div style="max-width: 250px; padding: 20px 20px 0 20px;"><p id="subject" contenteditable="true" style="border-bottom: solid 1px #222222; padding-bottom: 5px;">Edit Subject Line</p></div></td>
+  </tr>
+ </table>
+<table cellpadding="0" cellspacing="0" border="0" width="751" align="center" style="table-layout: fixed;">
+ <tr>
+  <td><!----><table cellpadding="0" cellspacing="0" width="100%" style="min-width: 100%;" class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"></td></tr></table><!----> </td>
+ </tr>
+</table>
+<!--BEGIN GMAIL FIX-->
+<table cellpadding="0" cellspacing="0" border="0" align="center" style="table-layout: fixed;">
+ <tr>
+  <td><div class="gmailfix" style="white-space:nowrap; font:15px courier; line-height:0;">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </div></td>
+ </tr>
+</table>
+<!--END GMAIL FIX--> 
+<!--BEGIN CONTENT - This 100% table centers the email-->
+<table cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="#ffffff">
+ <tr>
+  <td align="center" width="751"><!--BEGIN 750px TABLE - This is contains the email content-->
+   
+   <table align="center" cellpadding="0" cellspacing="0" border="0" width="751" style="min-width:751px; max-width:751px;">
+    <!--BEGIN PREHEADER-->
+    <tr>
+     <td><!----><table cellpadding="0" cellspacing="0" width="100%" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><table>
+      <!--BEGIN PREHEADER-->
+    <tr>
+       <td style="font-family:Arial, Helvetica, sans-serif; font-size:11px; mso-line-height-rule:exactly; line-height:16px; color: #000001; padding:24px 10px 10px 0px;" align="left"><!--begin preheader--><div id="preheader" contenteditable="true"><p id="preheader" contenteditable="true">Preheader Text</p></div><!--end preheader--></td>
+      </tr>
+    <!--END PREHEADER--> 
+</table></td></tr></table><!----> </td>
+    </tr>
+    <!--END PREHEADER--> 
+    <!--BEGIN PROMO BANNER-->
+    <tr>
+     <td><!----><table cellpadding="0" cellspacing="0" width="100%" style="min-width: 100%;" class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><table>
+    <!--BEGIN PROMO BANNER-->
+    <tr>
+       <td style="font-family:Arial, Helvetica, sans-serif; color:#ffffff; font-size:18px; padding:0;" valign="top" align="left"><div id="banner" contenteditable="true"><p id="banner" contenteditable="true"><a href="http://click.mail.itcosmetics.com/?qs=e84253976a00b49cea22ce76aa3d6390273483aa1901695da0d7f52fb3704ac9daa3ad996dcb39e032ee1f8a1e9652f0c27b078b04abb6a7" target="_blank" style="color:#ffffff; text-decoration:none;" ><img src="http://image.mail.itcosmetics.com/lib/fe8d13727c64027577/m/3/8d6e31ac-504d-4283-88b0-389e7b7c9119.jpg?b=1518491672000" alt="FREE SAMPLES with every order - FREE SHIPPING on U.S. orders over $25" style="display:block; border:none;" width="750" border="0" height="42"></a></p></div></td>
+      </tr>
+    <!--END PROMO BANNER--> 
+</table></td></tr></table><!----> </td>
+    </tr>
+    <!--END PROMO BANNER--> 
+    <!--BEGIN LOGO AND NAV MENU-->
+    <tr>
+     <td><!----><table cellpadding="0" cellspacing="0" width="100%" style="min-width: 100%;" class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><table cellspacing="0" cellpadding="0" border="0">
+     <!--BEGIN LOGO-->
+    <tr>
+       <td style="font-family:Arial, Helvetica, sans-serif; color:#000001; font-size:18px; padding:0;" valign="top" align="center"><a href="http://click.mail.itcosmetics.com/?qs=e84253976a00b49c57af4132ba31631d3f67bcbe7a317c185fdc6d6ea8adc9e3d34dd759677980d0343560e7714d89c97a0b8f204b8994ad" target="_blank" style="color:#000001; text-decoration:none;" ><img src="http://image.mail.itcosmetics.com/lib/fe8d13727c64027577/m/3/0b1f6146-e2a4-43be-b552-14352f580793.png" alt="IT COSMETICS" style="display:block; border:none;" width="750" border="0" height="123"></a></td>
+      </tr>
+    <!--END LOGO--> 
+    <!--BEGIN NAV MENU-->
+    <tr>
+       <td style="padding: 0;" valign="top" align="left"><table cellspacing="0" cellpadding="0" border="0">
+         <tr>
+         <td style="font-family:Arial, Helvetica, sans-serif; color:#000001; font-size:14px;" valign="top" align="left"><a href="http://click.mail.itcosmetics.com/?qs=e84253976a00b49c0b535881d8ca529d5371f4e4e0278467a7378224690186dafda47d3c47caac644ddd5b9449a0834b68d32593bc6994e8" target="_blank" style="color:#000001; text-decoration:none;" ><img src="http://image.mail.itcosmetics.com/lib/fe8d13727c64027577/m/1/LUSA_ITC_Nav_Real_Results.jpg" alt="REAL RESULTS" style="display:block;" width="140" border="0" height="30"></a></td>
+         <td style="font-family:Arial, Helvetica, sans-serif; color:#000001; font-size:14px;" valign="top" align="left"><a href="http://click.mail.itcosmetics.com/?qs=e84253976a00b49cfe8b2ea6013aa15e6518e05ba1b09ebd390aaeef62e2738bb8f1a4d5e959fb15cdb659cc65d1df9d78db8546a01151be" target="_blank" style="color:#000001; text-decoration:none;" ><img src="http://image.mail.itcosmetics.com/lib/fe8d13727c64027577/m/1/LUSA_ITC_Nav_Whats_New.jpg" alt="WHAT'S NEW" style="display:block;" width="100" border="0" height="30"></a></td>
+         <td style="font-family:Arial, Helvetica, sans-serif; color:#000001; font-size:14px;" valign="top" align="left"><a href="http://click.mail.itcosmetics.com/?qs=e84253976a00b49c1e7fbafd9cc72d9050dfebee6421ec248927c5b34fe254ccdc17b89d86142f2b2d8d55fffabc99dd36e5ed88de60cd56" target="_blank" style="color:#000001; text-decoration:none;" ><img src="http://image.mail.itcosmetics.com/lib/fe8d13727c64027577/m/1/LUSA_ITC_Nav_Top10.jpg" alt="TOP 10" style="display:block;" width="80" border="0" height="30"></a></td>
+         <td style="font-family:Arial, Helvetica, sans-serif; color:#000001; font-size:14px;" valign="top" align="left"><a href="http://click.mail.itcosmetics.com/?qs=e84253976a00b49ce7279c68af66afd04f575ff8c4bf25c73390cbe8c37adf09cbab35ec2046b1bb6006ae642144254f6edeaad59fe45350" target="_blank" style="color:#000001; text-decoration:none;" ><img src="http://image.mail.itcosmetics.com/lib/fe8d13727c64027577/m/1/LUSA_ITC_Nav_Face.jpg" alt="FACE" style="display:block;" width="68" border="0" height="30"></a></td>
+         <td style="font-family:Arial, Helvetica, sans-serif; color:#000001; font-size:14px;" valign="top" align="left"><a href="http://click.mail.itcosmetics.com/?qs=e84253976a00b49c641334937e6b15e32d0a32732aae17af766b53e9cc41661544b0df7e218a7fabdd6459c4f39ebb54687137e5297f6397" target="_blank" style="color:#000001; text-decoration:none;" ><img src="http://image.mail.itcosmetics.com/lib/fe8d13727c64027577/m/1/LUSA_ITC_Nav_Lips.jpg" alt="LIPS" style="display:block;" width="60" border="0" height="30"></a></td>
+         <td style="font-family:Arial, Helvetica, sans-serif; color:#000001; font-size:14px;" valign="top" align="left"><a href="http://click.mail.itcosmetics.com/?qs=e84253976a00b49c4426c42c705d4afdffe3dcbd939e51d6e8b51765c126a5ae9cf33887349bcd96b8a94cc347b1e41f881b775ac05dcbc2" target="_blank" style="color:#000001; text-decoration:none;" ><img src="http://image.mail.itcosmetics.com/lib/fe8d13727c64027577/m/1/LUSA_ITC_Nav_EYES.jpg" alt="EYES" style="display:block;" width="60" border="0" height="30"></a></td>
+         <td style="font-family:Arial, Helvetica, sans-serif; color:#000001; font-size:14px;" valign="top" align="left"><a href="http://click.mail.itcosmetics.com/?qs=e84253976a00b49c9bb2892a2571c4f6dc5117b08a0bff8a81ab9fb4acc33d17f123474e2b6adf3d41e52c099ec8bd1476d98b72f9cf5dd3" target="_blank" style="color:#000001; text-decoration:none;" ><img src="http://image.mail.itcosmetics.com/lib/fe8d13727c64027577/m/1/LUSA_ITC_Nav_Brows.jpg" alt="BROWS" style="display:block;" width="70" border="0" height="30"></a></td>
+         <td style="font-family:Arial, Helvetica, sans-serif; color:#000001; font-size:14px;" valign="top" align="left"><a href="http://click.mail.itcosmetics.com/?qs=e84253976a00b49c426017962d41687865b2deb86f86f0892e5f6ceada75d404c75b8e0a1549e74ab08987e0738b8faf18269c6e3e4f48d2" target="_blank" style="color:#000001; text-decoration:none;" ><img src="http://image.mail.itcosmetics.com/lib/fe8d13727c64027577/m/1/LUSA_ITC_Nav_Brushes_Tools.jpg" alt="BRUSHES &amp; TOOLS" style="display:block;" width="172" border="0" height="30"></a></td>
+        </tr>
+        </table></td>
+      </tr>
+    <!--END NAV MENU--> 
+</table></td></tr></table><!---->
+      </td>
+    </tr>
+    <!--END LOGO AND NAV MENU--> 
+    <!--BEGIN BODY CONTENT--> 
+    <!--BODY IMAGE BLOCKS--> 
+    <tr>
+<td><img src="http://image.mail.itcosmetics.com/lib/fe8d13727c64027577/m/3/b820a3ed-8a93-4a44-a621-0b8200dfdef2.jpg?b=1524087529000" alt=""></td></tr><tr>
+  <td valign="top" align="left">
+<div id="bodyCopy" contenteditable="true" style="font-family: Arial, sans-serif; font-size: 14px; color: #000001; line-height:20px; text-align:left; font-weight:400;"><p id="bodyCopy" contenteditable="true"><br />
+  Dear Customer,
+<br /><br />Lorem ipsum dolor sit amet, regione urbanitas sententiae ei per. Iudico causae at sed, et regione sanctus theophrastus vel, diam quando adolescens cum ei. Te vis altera expetendis, et nam mandamus quaerendum. Deleniti ponderum sit ea, eu lorem homero imperdiet pri, ei qui feugait recteque. Lucilius evertitur nec in. Viris utroque no his, fierent patrioque nec ad, eam modus persius iracundia an. Ius id posse error zril, no vivendo accumsan consectetuer vim, duis invidunt sadipscing ad eam.<br /><br />Etiam postea noster quo at, apeirian tractatos pro ei, feugiat delenit eam et. Ut vitae iisque copiosae nec, alia eros tibique his ex, et vitae accusam his. Civibus placerat hendrerit id has. Ne tale suas eam. Ex est invenire referrentur, id quidam volutpat his, per an augue postea.<br /><br />
+<tr>
+<td><img src="http://image.mail.itcosmetics.com/lib/fe8d13727c64027577/m/3/b820a3ed-8a93-4a44-a621-0b8200dfdef2.jpg?b=1524087529000" alt=""></td></tr></p></div></td>
+    </tr>
+    <!--END BODY IMAGE BLOCKS--> 
+    <!--BEGIN FOOTER--> 
+    <!--BEGIN WHITE MENU-->
+    <tr>
+     <td align="left" valign="top"><!----><table cellpadding="0" cellspacing="0" width="100%" style="min-width: 100%;" class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><table>
+   <!--BEGIN WHITE MENU-->
+       <tr>
+        <td style="padding:0;" valign="top" align="left"><table cellspacing="0" cellpadding="0" border="0">
+          <tr>
+           <td style="font-family:Arial, Helvetica, sans-serif;; color:#000001; font-size:14px;" valign="top" align="left"><a href="http://click.mail.itcosmetics.com/?qs=e84253976a00b49c990321b9e87d850733c13c88584216b82699cd8dec077f0a22319149a9e637200967fc166d4b415f69791d77ebdba1fe" target="_blank" style="color:#000001; text-decoration:none;" ><img src="http://image.mail.itcosmetics.com/lib/fe8d13727c64027577/m/3/af0dbdef-7308-45b5-a0e0-0447cefc9bd2.png" alt="FREE SHIPPING on orders over $25" style="display:block;" width="200" border="0" height="118"></a></td>
+           <td style="font-family:Arial, Helvetica, sans-serif;; color:#000001; font-size:14px;" valign="top" align="left"><a href="http://click.mail.itcosmetics.com/?qs=e84253976a00b49cd2a61816b25cda7e6027d7dbd4f38f6bf76e251c603f7f7435ef7323b38d32fc3afc74e70b30fa38098782d5f6d9c152" target="_blank" style="color:#000001; text-decoration:none;" ><img src="http://image.mail.itcosmetics.com/lib/fe8d13727c64027577/m/3/1579e614-ee4a-41f4-bac9-98e0671cd93b.png" alt="ENJOY FREE SAMPLES" style="display:block;" width="184" border="0" height="118"></a></td>
+           <td style="font-family:Arial, Helvetica, sans-serif;; color:#000001; font-size:14px;" valign="top" align="left"><a href="http://click.mail.itcosmetics.com/?qs=e84253976a00b49c0448f5dcdf6ab933c532436c4b85b405e6966cd090555ae8c943a76090b33dd7911f056237095e46091b5c05aaecbcb2" target="_blank" style="color:#000001; text-decoration:none;" ><img src="http://image.mail.itcosmetics.com/lib/fe8d13727c64027577/m/3/b075fb17-62cb-4a0d-9b2c-8486533e4564.png" alt="CHAT LIVE with an expert" style="display:block;" width="182" border="0" height="118"></a></td>
+           <td style="font-family:Arial, Helvetica, sans-serif;; color:#000001; font-size:14px;" valign="top" align="left"><a href="http://click.mail.itcosmetics.com/?qs=e84253976a00b49c0e44b2d41ea5285e572722c0ce06f727fdffd91c5bfeedefa82add60538575ee6d2dd258ef452ab794b87cee1b0d6ea2" target="_blank" style="color:#000001; text-decoration:none;" ><img src="http://image.mail.itcosmetics.com/lib/fe8d13727c64027577/m/3/675bf0aa-1534-4fdf-83d7-01fd7da0ae50.png" alt="HOW-TO VIDEOS and real results" style="display:block;" width="184" border="0" height="118"></a></td>
+          </tr>
+         </table></td>
+       </tr>
+       <!--END WHITE MENU--> 
+</table></td></tr></table><!---->
+      </td>
+    </tr>
+    <!--END WHITE MENU--> 
+    <!--BEGIN BLACK MENU-->
+    <tr>
+     <td><!----><table cellpadding="0" cellspacing="0" width="100%" style="min-width: 100%;" class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><table> 
+<!--BEGIN BLACK MENU-->
+       <tr>
+        <td style="padding:0;" valign="top" bgcolor="#000001" align="left" height="43"><table cellspacing="0" cellpadding="0" border="0">
+          <tr>
+           <td style="font-family:Helvetica Neue, Helvetica, Arial, sans-serif; color:#ffffff; font-size:14px;" valign="top" align="left"><a href="http://click.mail.itcosmetics.com/?qs=e84253976a00b49cd6309b90186223c3a2f4e3e8048be20940369a92028c3233ac166d0722d600c1fb813952ec6aa3455955083fbfcb3160" target="_blank" style="color:#ffffff; text-decoration:none;" ><img src="http://image.mail.itcosmetics.com/lib/fe8d13727c64027577/m/3/88c219b0-15f5-431a-b422-8557ce9e99a5.png" alt="IT STORY" style="display:block;" width="200" border="0" height="42"></a></td>
+           <td style="font-family:Helvetica Neue, Helvetica, Arial, sans-serif; color:#ffffff; font-size:14px;" valign="top" align="left"><a href="http://click.mail.itcosmetics.com/?qs=e84253976a00b49c014f1e10dcb73c48234637145919b9049a1f42d502648b5a8e4e93ce6a1c4182e0e1ab3a46941a4e7e8d2727ad5b493c" target="_blank" style="color:#ffffff; text-decoration:none;" ><img src="http://image.mail.itcosmetics.com/lib/fe8d13727c64027577/m/3/e5714208-d110-458d-b17c-21bce7a4b8f3.png" alt="CUSTOMER SERVICE - 1.800.356.5120" style="display:block;" width="304" border="0" height="42"></a></td>
+           <td style="font-family:Helvetica Neue, Helvetica, Arial, sans-serif; color:#ffffff; font-size:14px;" valign="top" align="left"><a href="http://click.mail.itcosmetics.com/?qs=e84253976a00b49c7cbf5c7e0d59861d1cc092737233ff37a5f4a9259660b9efe2126094404ddae303a5c5fcf396894f1f99ccac58a410b1" target="_blank" style="color:#ffffff; text-decoration:none;" ><img src="http://image.mail.itcosmetics.com/lib/fe8d13727c64027577/m/3/c15217aa-245e-4aa9-9782-5e13ecf835ce.png" alt="QVC SHOWTIMES" style="display:block;" width="246" border="0" height="42"></a></td>
+          </tr>
+         </table></td>
+       </tr>
+       <!--END BLACK MENU-->
+</table></td></tr></table><!---->
+      </td>
+    </tr>
+    <!--END BLACK MENU--> 
+    <!--BEGIN SOCIAL MENU-->
+    <tr>
+     <td><!----><table cellpadding="0" cellspacing="0" width="100%" style="min-width: 100%;" class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><table>
+          <!--BEGIN SOCIAL MENU-->
+         <tr>
+         <td style="padding:0;" valign="top" align="center"><table cellspacing="0" cellpadding="0" border="0">
+           <tr>
+           <td style="font-family:Arial, Helvetica, sans-serif;; color:#000001; font-size:14px;" valign="top" align="center"><img src="http://image.mail.itcosmetics.com/lib/fe8d13727c64027577/m/3/ef72f9a7-aab1-4190-8613-7441f47e9d1f.png" alt="Discover it. Love it. Believe it." style="display:block; border:none;" width="406" border="0" height="80"></td>
+           <td style="font-family:Arial, Helvetica, sans-serif; color:#000001; font-size:14px;" valign="top" align="left"><a href="http://click.mail.itcosmetics.com/?qs=e84253976a00b49c4446cf8ec43c56e6ef26252336a339f577a350db34d7fe3a10ec5ecce3892134b17a392eef192343ca9698db5225481b" target="_blank" style="color:#000001; text-decoration:none;" ><img src="http://image.mail.itcosmetics.com/lib/fe8d13727c64027577/m/1/LUSA_A11_170323_12.gif" alt="Facebook" style="display:block;" width="50" border="0" height="80"></a></td>
+           <td style="font-family:Arial, Helvetica, sans-serif; color:#000001; font-size:14px;" valign="top" align="left"><a href="http://click.mail.itcosmetics.com/?qs=e84253976a00b49c08c646df1156d135226b4c3ffc42eeb017e6cf03e9c060fda45a4e9996786f565bf9a6e7298cb2486de03e1390b9b055" target="_blank" style="color:#000001; text-decoration:none;" ><img src="http://image.mail.itcosmetics.com/lib/fe8d13727c64027577/m/1/LUSA_A11_170323_13.gif" alt="Twitter" style="display:block;" width="50" border="0" height="80"></a></td>
+           <td style="font-family:Arial, Helvetica, sans-serif; color:#000001; font-size:14px;" valign="top" align="left"><a href="http://click.mail.itcosmetics.com/?qs=e84253976a00b49c072ee4e05d7a78038002323b8f0c6d619f678dbe0c72b13139c15813bf3843d6ccea948b2124ae24f9bfea7b3c9e652d" target="_blank" style="color:#000001; text-decoration:none;" ><img src="http://image.mail.itcosmetics.com/lib/fe8d13727c64027577/m/1/LUSA_A11_170323_14.gif" alt="Instagram" style="display:block;" width="50" border="0" height="80"></a></td>
+           <td style="font-family:Arial, Helvetica, sans-serif; color:#000001; font-size:14px;" valign="top" align="left"><a href="http://click.mail.itcosmetics.com/?qs=e84253976a00b49ccf41e98e201eb5bd6cfa2b91d0060a2a9fb2ce9bfd7780a0f34f06871ef631eeda2eeb4990be8169c2e64bcd28be5c63" target="_blank" style="color:#000001; text-decoration:none;" ><img src="http://image.mail.itcosmetics.com/lib/fe8d13727c64027577/m/1/LUSA_A11_170323_15.gif" alt="YouTube" style="display:block;" width="50" border="0" height="80"></a></td>
+           <td style="font-family:Arial, Helvetica, sans-serif; color:#000001; font-size:14px;" valign="top" align="left"><a href="http://click.mail.itcosmetics.com/?qs=e84253976a00b49ce6a324a18f6b5e5a4bb92bace846cb19ca181bbdf5ac0b22dfee72d218876f11ec5010de336cfadb8b2839fc7dceb3e1" target="_blank" style="color:#000001; text-decoration:none;" ><img src="http://image.mail.itcosmetics.com/lib/fe8d13727c64027577/m/1/LUSA_A11_170323_16.gif" alt="Pinterest" style="display:block;" width="40" border="0" height="80"></a></td>
+           <td style="font-family:Arial, Helvetica, sans-serif; color:#000001; font-size:14px;" valign="top" align="left"><img src="http://image.mail.itcosmetics.com/lib/fe8d13727c64027577/m/1/LUSA_A11_170323_17.gif" alt="hashtag-itcosmetics" style="display:block;" width="104" border="0" height="80"></td>
+          </tr>
+           <!--END SOCIAL MENU-->
+          </table></td>
+        </tr>
+</table></td></tr></table><!----> </td>
+    </tr>
+    <!--END SOCIAL MENU--> 
+    <!--BEGIN LEGAL/DISCLOSURE-->
+    <tr>
+     <td><!----><table cellpadding="0" cellspacing="0" width="100%" style="min-width: 100%;" class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><table width="100%">
+ 
+<!--BEGIN LEGAL/DISCLOSURE-->
+         <tr>
+         <td style="font-family:Arial, Helvetica, sans-serif; font-size:11px; mso-line-height-rule: exactly;line-height:15px; color:#000001; padding:10px 30px 10px 30px;" class="blueFix" align="center"><a style="color:#000001; text-decoration: none; pointer-events: none;" target="_blank">&copy; 2018 IT Cosmetics<br>
+           This email was sent by: IT Cosmetics, 924 Bergen Ave., Suite 173, Jersey City, NJ 07306</a><br>
+           Read our <a href="http://click.mail.itcosmetics.com/?qs=e84253976a00b49cd4de9d3dff52206113271703862d1b76b81e5a8e127e7145e9511da97a31b2331a443f12da1605a4e9068a0d9596a469" target="_blank"  style="color:#25408f; text-decoration: underline;">Privacy Policy</a> or <a href="http://pages.mail.itcosmetics.com/page.aspx?qs=2e4c31a3756cb940a40d715655cc2899944fd122e1d251e06d0a7a1b98ebafa85da49e6c3ac45d297cfdb0758d0aae633170a517f756cf4cbd8408cebac31f8c2e54b347b94b09152c6cbb407d8ce304" target="_blank"  style="color:#25408f; text-decoration: underline;">Unsubscribe</a>.
+           </td>
+         <!--END LEGAL/DISCLOSURE--> 
+</tr></table><div style="font-family:Arial, Helvetica, sans-serif; font-size:11px; mso-line-height-rule: exactly;line-height:15px; color:#000001; padding:10px 30px 10px 30px;" class="blueFix" align="center" id="legal_1" contenteditable="true"><p id="legal_1" contenteditable="true">
+           *Offer code SORRYFNF25 is valid for 25% off your entire order and free shipping through 5&#65279;/1&#65279;9/1&#65279;8 (11:&#65279;59 P&#65279;M EDT) and may only be redeemed one time. Only available at itcosm&#65279;etics.&#65279;com. Not valid on retailer websites and TV offers. Not valid on previous or pending purchases or to orders placed after expiration date. Cannot be combined with any other offer. Cannot be redeemed for cash. Orders shipped to Alaska, Hawaii and Puerto Rico do not qualify—standard $5.95 shipping charge applies. Offer applies to authorized purchases only. Only authorized orders will be processed and&nbsp;shipped.</p></div></td></tr></table><!----> </td>
+    </tr>
+    <!--END LEGAL/DISCLOSURE--> 
+    <!--END FOOTER-->
+   </table></td>
+ </tr>
+</table>
+<!--END 750px TABLE--> 
+<!--END CONTENT--> 
+ <table width="100%">
+  <tr>
+   <td align="center" style="padding-top: 20px;">
+   <form id="editor" method="post" action="#">
+  <input type="hidden" maxlength="" name="subjectline" id="subjectline" value="" />   
+  <input type="hidden" maxlength="" name="preheader" id="preheader" value="" />  
+  <input type="hidden" maxlength="" name="bodycopy" id="bodycopy" value="" />  
+  <input type="hidden" maxlength="" name="legal1" id="legal1" value="" /> 
+  <input type="hidden" maxlength="" name="banner" id="banner" value="" />  
+
+  <br />
+  <input class="btn" type="submit" value="Build Email" />  
+  </form>
+</td>
+  </tr>
+ </table>
+ <div style="padding-top: 30px;"></div>
+</div>
+</div>
+<script src="http://cdn.ckeditor.com/4.4.7/full/ckeditor.js"></script> 
+<script>
+CKEDITOR.disableAutoInline = true;
+CKEDITOR.inline( 'legal_1' );
+CKEDITOR.inline( 'bodyCopy' );
+CKEDITOR.inline( 'subject' );
+CKEDITOR.inline( 'preheader' );
+CKEDITOR.inline( 'banner' );
+</script> 
+<script type="text/javascript">
+timer = setInterval(updateDiv,1000);
+function updateDiv(){
+ var bodyCopy = CKEDITOR.instances.bodyCopy.getData();
+ var legal1 = CKEDITOR.instances.legal_1.getData();
+ var preheader = CKEDITOR.instances.preheader.getData();
+ var subjectline = CKEDITOR.instances.subject.getData();
+ var banner = CKEDITOR.instances.banner.getData();
+ document.getElementById("subjectline").value = escape(subjectline);
+ document.getElementById("legal1").value = escape(legal1);
+ document.getElementById("bodycopy").value = escape(bodyCopy);
+document.getElementById("preheader").value = escape(bodyCopy);
+document.getElementById("banner").value = escape(banner);
+}
+</script>
+<script>
+(function($) {
+    $('.accordion > li:eq(0) a').addClass('active').next().slideDown();
+
+    $('.accordion a').click(function(j) {
+        var dropDown = $(this).closest('li').find('p');
+
+        $(this).closest('.accordion').find('p').not(dropDown).slideUp();
+
+        if ($(this).hasClass('active')) {
+            $(this).removeClass('active');
+        } else {
+            $(this).closest('.accordion').find('a.active').removeClass('active');
+            $(this).addClass('active');
+        }
+
+        dropDown.stop(false, true).slideToggle();
+
+        j.preventDefault();
+    });
+})(jQuery);</script>
+</body>
+</html>
